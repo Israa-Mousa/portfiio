@@ -9,7 +9,7 @@
 - ⚡ أداء عالي وسريع
 - 🎨 تأثيرات بصرية رائعة
 - ♿ متوافق مع معايير الوصولية
-- 📊 أقسام متعددة (الرئيسية، عني، مهارات، مشاريع، تواصل)
+- 📊 أقسام متعددة (الرئيسية، عني، مهارات، شهادات، مشاريع، تواصل)
 
 ## 📁 هيكل الملفات
 
@@ -46,7 +46,7 @@ portfolio/
 
 1. **أنشئ مستودع جديد:**
    - اذهب إلى github.com وانقر على "New Repository"
-   - سمه: `username.github.io`
+   - سمه: `Israa-Mousa/portfiio`
    - اختر "Public"
    - اضغط "Create Repository"
 
@@ -94,14 +94,14 @@ git push -u origin main
 في ملف `index.html`:
 - غيّر الاسم والبريد الإلكتروني
 - حدّث روابط وسائل التواصل
-- عدّل المشاريع والمهارات
+- عدّل المشاريع والمهارات والشهادات
 
 ### تغيير الألوان:
 في ملف `styles.css`:
 ```css
 :root {
-    --primary-color: #667eea;      /* اللون الأساسي */
-    --secondary-color: #764ba2;    /* اللون الثانوي */
+    --primary-color: #d81dd8;      /* اللون الأساسي */
+    --secondary-color: #861e8a;    /* اللون الثانوي */
     --text-dark: #1a202c;
     --bg-light: #f8f9fa;
 }
@@ -110,6 +110,13 @@ git push -u origin main
 ## 📧 إضافة بريد إلكتروني حقيقي
 
 لجعل نموذج التواصل يعمل فعلياً، يمكنك استخدام خدمات مثل:
+
+### EmailJS
+```javascript
+const EMAILJS_SERVICE_ID = 'your_service_id';
+const EMAILJS_TEMPLATE_ID = 'your_template_id';
+const EMAILJS_PUBLIC_KEY = 'your_public_key';
+```
 
 ### Formspree
 ```html
@@ -121,39 +128,6 @@ git push -u origin main
 </form>
 ```
 
-### EmailJS
-1. اذهب إلى emailjs.com
-2. أنشئ حساب مجاني
-3. أضف الكود إلى `script.js`
+## 📄 الترخيص
 
-## 🎓 التحسينات المستقبلية
-
-- [ ] إضافة blog section
-- [ ] دعم الوضع الليلي (Dark Mode)
-- [ ] تحسين SEO
-- [ ] اختبار الأداء
-- [ ] إضافة animation متقدمة
-- [ ] دعم لغات متعددة
-
-## 📱 التوافق
-
-- ✅ جميع المتصفحات الحديثة
-- ✅ الهواتف الذكية
-- ✅ الأجهزة اللوحية
-- ✅ الحاسوب
-
-## 📝 الترخيص
-
-هذا المشروع مفتوح المصدر ومتاح للجميع.
-
-## 👋 التواصل
-
-- **LinkedIn:** [linkedin.com/in/israa-mousa](https://www.linkedin.com/in/israa-mousa-691950211/)
-- **GitHub:** [github.com/your-username](https://github.com)
-- **البريد:** your-email@example.com
-
----
-
-**صنع بـ ❤️ من قبل إسراء موسى**
-
-**آخر تحديث:** 2025
+هذا المشروع مفتوح المصدر تحت رخصة MIT.

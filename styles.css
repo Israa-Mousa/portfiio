@@ -366,7 +366,15 @@ a {
     font-size: 1.1rem;
     max-width: 620px;
     color: var(--muted);
+    margin-bottom: 0.7rem;
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    max-width: 720px;
+    color: rgba(255,255,255,0.82);
     margin-bottom: 2rem;
+    line-height: 1.8;
 }
 
 .hero-highlights {
@@ -407,7 +415,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 1.8rem;
+    padding: 1.1rem 2rem;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
@@ -756,6 +764,83 @@ a {
     text-align: center;
     font-weight: 700;
     box-shadow: 0 22px 50px rgba(0,0,0,0.16);
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.skill-pill:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 80px rgba(216,29,216,0.18);
+    background: linear-gradient(135deg, rgba(216,29,216,0.16), rgba(134,30,138,0.18));
+}
+
+/* ============================================
+   CERTIFICATES
+   ============================================ */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.certificate-card {
+    background: var(--card-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 24px;
+    padding: 1.8rem;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.16);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.24);
+}
+
+.certificate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+    border-radius: 24px 24px 0 0;
+}
+
+.certificate-header h3 {
+    color: var(--text);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.certificate-issuer {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.certificate-details {
+    margin-top: 1.2rem;
+}
+
+.certificate-date {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.certificate-skills {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 /* ============================================
@@ -816,12 +901,12 @@ a {
 
 .contact-form {
     display: grid;
-    gap: 1.25rem;
+    gap: 1.5rem;
     background: var(--card-bg);
     border: 1px solid var(--panel-border);
     border-radius: 32px;
-    padding: 2rem;
-    box-shadow: 0 35px 80px rgba(0,0,0,0.16);
+    padding: 2.5rem;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.18);
 }
 
 .form-group {
@@ -836,12 +921,12 @@ a {
 
 .form-input {
     width: 100%;
-    padding: 1rem 1.1rem;
+    padding: 1.15rem 1.2rem;
     border-radius: 18px;
     border: 1px solid rgba(255,255,255,0.12);
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.06);
     color: var(--text);
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .form-input:focus {
@@ -894,6 +979,7 @@ a {
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--text);
     transition: var(--transition);
+    text-decoration: none;
 }
 
 .footer-icons a:hover {
@@ -908,11 +994,12 @@ a {
     border-radius: 14px;
     align-items: center;
     justify-content: center;
-    background: var(--surface);
-    border: 1px solid var(--panel-border);
-    color: var(--accent);
+    background: linear-gradient(140deg, var(--accent), var(--accent-strong));
+    border: 1px solid rgba(255,255,255,0.16);
+    color: #ffffff;
     font-weight: 800;
     font-size: 1rem;
+    box-shadow: 0 18px 40px rgba(216,29,216,0.18);
 }
 
 body.light .brand-logo.upwork-logo {
@@ -978,7 +1065,8 @@ body.light .project-demo {
     .about-grid,
     .freelance-grid,
     .contact-grid,
-    .skills-grid {
+    .skills-grid,
+    .certificates-grid {
         grid-template-columns: 1fr;
     }
 }
