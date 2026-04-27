@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Israa Mazaraa | Full Stack Developer & QA Specialist">
+    <title>Israa Mazaraa | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-controls">
+        <div class="lang-toggle">
+            <button class="lang-btn active" id="langBtn-ar">AR</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn" id="langBtn-en">En</button>
+        </div>
+        <button class="theme-switch" id="themeSwitch" aria-label="Toggle theme">☀️</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container container">
+            <a href="#home" class="logo">Israa</a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link" data-ar="مشروعات" data-en="Projects">مشروعات</a></li>
+                <li class="nav-item"><a href="#freelance" class="nav-link" data-ar="عمل حر" data-en="Freelance">عمل حر</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" data-ar="حول" data-en="About">حول</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link" data-ar="المهارات" data-en="Skills">المهارات</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-ar="اتصل" data-en="Contact">اتصل</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero section">
+        <div class="container hero-grid">
+            <div class="hero-copy reveal">
+                <span class="eyebrow" data-ar="مهندس برمجيات" data-en="Software Engineer">مهندس برمجيات</span>
+                <h1><span data-ar="أنا" data-en="I am">أنا</span> <strong data-ar="اسراء مزارعة" data-en="Israa Mazaraa">Israa Mazaraa</strong></h1>
+                <p class="hero-title" data-ar="Full Stack & QA Specialist، أبني أنظمة موثوقة بسرعة وكفاءة." data-en="Full Stack & QA Specialist building reliable systems with speed and quality.">Full Stack & QA Specialist، أبني أنظمة موثوقة بسرعة وكفاءة.</p>
+                <div class="hero-highlights">
+                    <div>
+                        <h3>2+</h3>
+                        <p data-ar="سنوات خبرة" data-en="Years Experience">سنوات خبرة</p>
+                    </div>
+                    <div>
+                        <h3>10+</h3>
+                        <p data-ar="مشروعات" data-en="Projects">مشروعات</p>
+                    </div>
+                    <div>
+                        <h3>QA</h3>
+                        <p data-ar="تركيز على الجودة" data-en="Quality Focus">تركيز على الجودة</p>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary" data-ar="عرض الأعمال" data-en="View Work">عرض الأعمال</a>
+                    <a href="Israa_Mazaraa_CV.pdf" download class="btn btn-secondary" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية</a>
+                    <a href="#contact" class="btn btn-secondary" data-ar="احصل على عرض" data-en="Get a Quote">احصل على عرض</a>
+                </div>
+                <div class="hero-stack">
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>NestJS</span>
+                    <span>Grails</span>
+                    <span>Laravel</span>
+                    <span>React</span>
+                    <span>Prisma</span>
+                    <span>PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="hero-panel reveal">
+                <div class="hero-card">
+                    <div class="hero-card__header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="hero-card__content">
+                        <p class="code-line">&lt;<span>Developer</span>&gt;</p>
+                        <p class="code-line">&nbsp;&nbsp;&lt;<span>Name</span>&gt;Israa Mazaraa&lt;/<span>Name</span>&gt;</p>
+                        <p class="code-line">&nbsp;&nbsp;&lt;<span>Role</span>&gt;Full Stack & QA Engineer&lt;/<span>Role</span>&gt;</p>
+                        <p class="code-line">&nbsp;&nbsp;&lt;<span>Stack</span>&gt;Node.js, Spring Boot, Grails, React&lt;/<span>Stack</span>&gt;</p>
+                        <p class="code-line">&lt;/<span>Developer</span>&gt;</p>
+                    </div>
+                    <div class="hero-card__footer">
+                        <span data-ar="رؤيتي: جودة قبل الإصلاح" data-en="My mission: quality before fix">رؤيتي: جودة قبل الإصلاح</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container section-heading reveal">
+            <span class="section-label" data-ar="المشاريع" data-en="Projects">المشاريع</span>
+            <h2 data-ar="مشروعات حقيقية تظهر خبرتي في الهندسة والتطوير" data-en="Real projects showing my engineering and development expertise">مشروعات حقيقية تظهر خبرتي في الهندسة والتطوير</h2>
+            <p data-ar="مشاريع من LinkedIn تعكس عملي على نظم المؤسسات، التجارة الإلكترونية، التعليم، والتحليل البياني." data-en="LinkedIn-sourced projects reflecting work on enterprise systems, e-commerce, education, and analytics.">مشاريع من LinkedIn تعكس عملي على نظم المؤسسات، التجارة الإلكترونية، التعليم، والتحليل البياني.</p>
+        </div>
+
+        <div class="container projects-grid">
+            <article class="project-card reveal">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&auto=format&fit=crop');"></div>
+                <div class="project-body">
+                    <span class="project-tag" data-ar="Tascom" data-en="Tascom">Tascom</span>
+                    <h3 data-ar="منصة مهام مجتمعية" data-en="Community Help Platform">منصة مهام مجتمعية</h3>
+                    <p data-ar="منصة تربط المستخدمين الذين يحتاجون مساعدة بأشخاص قادرين على تنفيذ المهام، مع تحفيز نقاط بدل المال." data-en="A community platform connecting task requesters with helpers, using points instead of money for rewards.">منصة تربط المستخدمين الذين يحتاجون مساعدة بأشخاص قادرين على تنفيذ المهام، مع تحفيز نقاط بدل المال.</p>
+                    <ul class="project-details">
+                        <li data-ar="تصميم وتطوير RESTful APIs" data-en="Designed and built RESTful APIs">تصميم وتطوير RESTful APIs</li>
+                        <li data-ar="إدارة قواعد البيانات PostgreSQL/MySQL" data-en="Managed PostgreSQL/MySQL databases">إدارة قواعد البيانات PostgreSQL/MySQL</li>
+                        <li data-ar="تكامل الخدمات الخلفية والواجهة" data-en="Integrated backend services with frontend">تكامل الخدمات الخلفية والواجهة</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="#contact" class="project-link" data-ar="استفسر الآن" data-en="Ask Now">استفسر الآن</a>
+                        <a href="#freelance" class="project-demo" data-ar="عرض ديمو" data-en="Demo">عرض ديمو</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&auto=format&fit=crop');"></div>
+                <div class="project-body">
+                    <span class="project-tag" data-ar="مؤسسة عامة" data-en="Public Institution">مؤسسة عامة</span>
+                    <h3 data-ar="نظام أرشفة المستندات" data-en="Document Archiving System">نظام أرشفة المستندات</h3>
+                    <p data-ar="نظام لإدارة الأرشيف والمراسلات يضمن الوصول الآمن والبحث المتقدم وفهرسة الوثائق." data-en="A document management system ensuring secure access, advanced search, and archiving workflows.">نظام لإدارة الأرشيف والمراسلات يضمن الوصول الآمن والبحث المتقدم وفهرسة الوثائق.</p>
+                    <ul class="project-details">
+                        <li data-ar="تحليل الأعمال وتصميم البيانات" data-en="Business analysis and data modeling">تحليل الأعمال وتصميم البيانات</li>
+                        <li data-ar="التطوير الكامل باستخدام Grails" data-en="Full-stack development with Grails">التطوير الكامل باستخدام Grails</li>
+                        <li data-ar="اختبار موثوقية النظام" data-en="Ensured system reliability with testing">اختبار موثوقية النظام</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="#contact" class="project-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+                        <a href="https://www.linkedin.com/in/israa-mousa-691950211/details/projects/" target="_blank" class="project-demo" data-ar="رؤية المشروع" data-en="See Project">رؤية المشروع</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&auto=format&fit=crop');"></div>
+                <div class="project-body">
+                    <span class="project-tag" data-ar="Yalla Shabab" data-en="Yalla Shabab">Yalla Shabab</span>
+                    <h3 data-ar="منصة تدريب وتمكين شبابية" data-en="Youth Training Platform">منصة تدريب وتمكين شبابية</h3>
+                    <p data-ar="منصة تربط الشباب بالشركات عبر دورات، فرص تدريب، وفعاليات توظيف بواجهة حديثة." data-en="A platform connecting youth with companies through training, internships, and career events.">منصة تربط الشباب بالشركات عبر دورات، فرص تدريب، وفعاليات توظيف بواجهة حديثة.</p>
+                    <ul class="project-details">
+                        <li data-ar="بناء الخلفية بـ Spring Boot" data-en="Built backend with Spring Boot">بناء الخلفية بـ Spring Boot</li>
+                        <li data-ar="واجهة مستخدم تفاعلية بـ React" data-en="Interactive UI with React">واجهة مستخدم تفاعلية بـ React</li>
+                        <li data-ar="تمكين التوظيف والتدريب" data-en="Enabled hiring and youth development">تمكين التوظيف والتدريب</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="#contact" class="project-link" data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</a>
+                        <a href="#freelance" class="project-demo" data-ar="احجز استشارة" data-en="Book a Call">احجز استشارة</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&auto=format&fit=crop');"></div>
+                <div class="project-body">
+                    <span class="project-tag" data-ar="Bagisto" data-en="Bagisto">Bagisto</span>
+                    <h3 data-ar="متجر إلكتروني مخصص" data-en="Custom E-commerce">متجر إلكتروني مخصص</h3>
+                    <p data-ar="تطوير متجر إلكتروني باستخدام Bagisto مع تخصيص واجهة العميل ووظائف المتجر حسب طلب العميل." data-en="Developed a Bagisto e-commerce store with client branding and custom shopping features.">تطوير متجر إلكتروني باستخدام Bagisto مع تخصيص واجهة العميل ووظائف المتجر حسب طلب العميل.</p>
+                    <ul class="project-details">
+                        <li data-ar="تخصيص واجهة Laravel" data-en="Laravel-based UI customization">تخصيص واجهة Laravel</li>
+                        <li data-ar="تحسين تجربة التسوق" data-en="Improved shopping experience">تحسين تجربة التسوق</li>
+                        <li data-ar="تكامل وظائف التجارة الإلكترونية" data-en="Integrated e-commerce features">تكامل وظائف التجارة الإلكترونية</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="#contact" class="project-link" data-ar="اطلب نطاق" data-en="Request Scope">اطلب نطاق</a>
+                        <a href="https://mostaql.com/u/Israa_Mazaraa" target="_blank" class="project-demo" data-ar="اعرض Mostaql" data-en="View Mostaql">اعرض Mostaql</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="container projects-footer reveal">
+            <a href="#contact" class="btn btn-primary projects-cta" data-ar="اطلب عرضاً الآن" data-en="Request a proposal">اطلب عرضاً الآن</a>
+        </div>
+    </section>
+
+    <section id="freelance" class="section freelance">
+        <div class="container section-heading reveal">
+            <span class="section-label" data-ar="عمل حر" data-en="Freelance">عمل حر</span>
+            <h2 data-ar="مستعد للعمل عبر Upwork وMostaql" data-en="Ready to work on Upwork and Mostaql">مستعد للعمل عبر Upwork وMostaql</h2>
+            <p data-ar="ابحث عن مشاريع Full Stack وQA، وأقدم حلول تعتمد على جودة عالية وتنفيذ أسرع." data-en="Looking for Full Stack and QA projects, delivering high quality and fast execution.">ابحث عن مشاريع Full Stack وQA، وأقدم حلول تعتمد على جودة عالية وتنفيذ أسرع.</p>
+        </div>
+        <div class="container freelance-grid reveal">
+            <article class="platform-card">
+                <span class="brand-logo upwork-logo" aria-hidden="true">U</span>
+                <h3>Upwork</h3>
+                <p data-ar="عمل مستقل احترافي في تطوير الويب وضمان الجودة." data-en="Professional freelance work in web development and QA.">عمل مستقل احترافي في تطوير الويب وضمان الجودة.</p>
+                <a href="https://www.upwork.com/freelancers/~0161b48e9f69c35493" target="_blank" class="btn btn-primary">زيارة Upwork</a>
+            </article>
+            <article class="platform-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Mostaql</h3>
+                <p data-ar="خدمات عربية للعمل الحر للمشاريع البرمجية وضمان الجودة." data-en="Arabic freelance services for software and QA projects.">خدمات عربية للعمل الحر للمشاريع البرمجية وضمان الجودة.</p>
+                <a href="https://mostaql.com/u/Israa_Mazaraa" target="_blank" class="btn btn-primary">زيارة Mostaql</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container section-heading reveal">
+            <span class="section-label" data-ar="حول" data-en="About">حول</span>
+            <h2 data-ar="أنا مطورة وكاشفة أخطاء تدمج الجودة بالتطوير" data-en="I’m a developer and QA specialist blending quality with development">أنا مطورة وكاشفة أخطاء تدمج الجودة بالتطوير</h2>
+            <p data-ar="أعمل على الأنظمة من البداية للنهاية: باك إند، واجهة، اختبارات، ونشر بثقة." data-en="I work end-to-end: backend, frontend, testing, and deployment with confidence.">أعمل على الأنظمة من البداية للنهاية: باك إند، واجهة، اختبارات، ونشر بثقة.</p>
+        </div>
+        <div class="container about-grid reveal">
+            <article class="about-card">
+                <h3 data-ar="رؤيتي المهنية" data-en="My Professional Vision">رؤيتي المهنية</h3>
+                <p data-ar="أؤمن أن الفرق الهندسية الممتازة تقضي وقتاً أكبر في التحقق من الجودة من الوقت الذي تقضيه في إصلاح المشاكل." data-en="I believe high-performing engineering teams spend more time validating quality than fixing issues.">أؤمن أن الفرق الهندسية الممتازة تقضي وقتاً أكبر في التحقق من الجودة من الوقت الذي تقضيه في إصلاح المشاكل.</p>
+                <p data-ar="أحب العمل على النظم الكاملة، لا كتابة الكود فقط، بل التأكد من أنه يعمل فعلياً بكفاءة وأمان واستقرار." data-en="I enjoy working end-to-end, not just writing code, but ensuring it runs efficiently, securely, and stably.">أحب العمل على النظم الكاملة، لا كتابة الكود فقط، بل التأكد من أنه يعمل فعلياً بكفاءة وأمان واستقرار.</p>
+            </article>
+            <article class="about-details">
+                <div>
+                    <strong data-ar="الموقع" data-en="Location">الموقع</strong>
+                    <p data-ar="فلسطين" data-en="Palestine">فلسطين</p>
+                </div>
+                <div>
+                    <strong data-ar="الخبرة" data-en="Experience">الخبرة</strong>
+                    <p>2+ سنوات</p>
+                </div>
+                <div>
+                    <strong data-ar="التخصص" data-en="Specialty">التخصص</strong>
+                    <p data-ar="Full Stack & QA" data-en="Full Stack & QA">Full Stack & QA</p>
+                </div>
+                <div>
+                    <strong data-ar="البريد" data-en="Email">البريد</strong>
+                    <p><a href="mailto:israamousa96@gmail.com">israamousa96@gmail.com</a></p>
+                </div>
+                <div>
+                    <strong data-ar="العمل" data-en="Available">العمل</strong>
+                    <p data-ar="متاح مستقل / عن بعد / هجين" data-en="Freelance / Remote / Hybrid">متاح مستقل / عن بعد / هجين</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container section-heading reveal">
+            <span class="section-label" data-ar="المهارات" data-en="Skills">المهارات</span>
+            <h2 data-ar="مجموعة أدوات متكاملة للبرمجة والاختبار" data-en="A complete toolkit for coding and testing">مجموعة أدوات متكاملة للبرمجة والاختبار</h2>
+            <p data-ar="أستخدم أحدث التقنيات لبناء تطبيقات ويب وتطبيقات بيانات فعالة وموثوقة." data-en="I use modern technologies to build reliable web and data applications.">أستخدم أحدث التقنيات لبناء تطبيقات ويب وتطبيقات بيانات فعالة وموثوقة.</p>
+        </div>
+        <div class="container skills-grid reveal">
+            <div class="skill-pill">Node.js</div>
+            <div class="skill-pill">Express</div>
+            <div class="skill-pill">NestJS</div>
+            <div class="skill-pill">Grails</div>
+            <div class="skill-pill">Spring Boot</div>
+            <div class="skill-pill">Laravel</div>
+            <div class="skill-pill">React</div>
+            <div class="skill-pill">Prisma</div>
+            <div class="skill-pill">PostgreSQL</div>
+            <div class="skill-pill">MySQL</div>
+            <div class="skill-pill">Python</div>
+            <div class="skill-pill">Cypress</div>
+            <div class="skill-pill">QA Automation</div>
+            <div class="skill-pill">Data Science</div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container contact-grid reveal">
+            <article class="contact-panel">
+                <span class="section-label" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</span>
+                <h2 data-ar="دعنا نبدأ مشروعك القادم" data-en="Let’s start your next project">دعنا نبدأ مشروعك القادم</h2>
+                <p data-ar="متاح لمشاريع تطوير الويب، أنظمة المؤسسات، الأتمتة، وتطبيقات البيانات." data-en="Available for web development, enterprise systems, automation, and data applications.">متاح لمشاريع تطوير الويب، أنظمة المؤسسات، الأتمتة، وتطبيقات البيانات.</p>
+                <div class="contact-details">
+                    <div>
+                        <strong data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</strong>
+                        <a href="mailto:israamousa96@gmail.com">israamousa96@gmail.com</a>
+                    </div>
+                    <div>
+                        <strong data-ar="الهاتف" data-en="Phone">الهاتف</strong>
+                        <a href="tel:+962123456789">+962 XX XXXX XXX</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/israa-mousa-691950211/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Israa-Mousa/portfiio" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~0161b48e9f69c35493" target="_blank" title="Upwork" class="upwork-link"><span class="brand-logo upwork-logo">U</span></a>
+                </div>
+            </article>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name" data-ar="الاسم" data-en="Name">الاسم</label>
+                    <input id="name" type="text" class="form-input" placeholder="الاسم" data-placeholder-ar="الاسم" data-placeholder-en="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                    <input id="email" type="email" class="form-input" placeholder="البريد الإلكتروني" data-placeholder-ar="البريد الإلكتروني" data-placeholder-en="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-ar="الرسالة" data-en="Message">الرسالة</label>
+                    <textarea id="message" class="form-input" rows="6" placeholder="الرسالة" data-placeholder-ar="الرسالة" data-placeholder-en="Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <p data-ar="© 2026 إسراء مزارعة. جميع الحقوق محفوظة." data-en="© 2026 Israa Mazaraa. All rights reserved.">© 2026 إسراء مزارعة. جميع الحقوق محفوظة.</p>
+            <div class="footer-actions">
+                <p class="footer-note" data-ar="مصنوع بحب باستخدام HTML, CSS, JavaScript" data-en="Made with ❤️ using HTML, CSS, JavaScript">مصنوع بحب باستخدام HTML, CSS, JavaScript</p>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/israa-mousa-691950211/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Israa-Mousa/portfiio" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~0161b48e9f69c35493" target="_blank" class="upwork-link"><span class="brand-logo upwork-logo">U</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
