@@ -3,8 +3,8 @@
 // ============================================
 
 // Fill these from your EmailJS dashboard to enable direct sending.
-const EMAILJS_SERVICE_ID = 'service_juqtrh8';
-const EMAILJS_TEMPLATE_ID = '1ughxkx';
+const EMAILJS_SERVICE_ID = 'service_2639jus';
+const EMAILJS_TEMPLATE_ID = 'template_fcv8bdu';
 const EMAILJS_PUBLIC_KEY = 'lCxJipnIPO_CMkd5E';
 
 const translations = {
@@ -248,8 +248,14 @@ function handleFormSubmit(event) {
             .catch((error) => {
                 console.error('EmailJS send failed:', error);
                 const details = error?.text || error?.message || '';
+                const normalized = String(details).toLowerCase();
+                const serviceHint = normalized.includes('service id not found')
+                    ? ' Use the exact Service ID from EmailJS > Email Services.'
+                    : '';
                 showAlert(
-                    details ? `${translations[currentLang].sendError} (${details})` : translations[currentLang].sendError,
+                    details
+                        ? `${translations[currentLang].sendError} (${details}${serviceHint})`
+                        : translations[currentLang].sendError,
                     'error'
                 );
                 submitButton.disabled = false;
