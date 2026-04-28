@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +10,20 @@
 </head>
 <body>
     <div class="top-controls">
+        <!-- language toggle hidden -->
+        <!--
         <div class="lang-toggle">
             <button class="lang-btn active" id="langBtn-ar">AR</button>
             <span class="lang-divider">/</span>
             <button class="lang-btn" id="langBtn-en">En</button>
         </div>
-        <button class="theme-switch" id="themeSwitch" aria-label="Toggle theme">☀️</button>
+        -->
+        <!-- <button class="theme-switch" id="themeSwitch" aria-label="Toggle theme">☀️</button> -->
     </div>
 
     <nav class="navbar">
         <div class="nav-container container">
-            <a href="#home" class="logo">Israa</a>
+            <a href="#home" class="logo">Israa Mazaraa</a>
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item"><a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link" data-ar="مشروعات" data-en="Projects">مشروعات</a></li>
@@ -40,7 +43,7 @@
         <div class="container hero-grid">
             <div class="hero-copy reveal">
                 <span class="eyebrow" data-ar="مهندس برمجيات" data-en="Software Engineer">مهندس برمجيات</span>
-                <h1><span data-ar="أنا" data-en="I am">أنا</span> <strong data-ar="اسراء مزارعة" data-en="Israa Mazaraa">Israa Mazaraa</strong></h1>
+                <h1><span class="hero-prefix" data-ar="أنا" data-en="I am">أنا</span> <strong data-ar="اسراء مزارعة" data-en="Israa Mazaraa">Israa Mazaraa</strong></h1>
                 <p class="hero-title" data-ar="مهندس برمجيات متكامل  | ضمان الجودة وأتمتة الاختبارات | بايثون علم البيانات" data-en="Full Stack & Software Engineer | QA & Test Automation | Python & Data Science">Full Stack & Software Engineer | QA & Test Automation | Python & Data Science</p>
                 <p class="hero-subtitle" data-ar="Node.js, Express, NestJS, Grails, ASP.NET Core, Spring Boot, Laravel, React, Prisma, PostgreSQL, MySQL" data-en="Node.js, Express, NestJS, Grails, ASP.NET Core, Spring Boot, Laravel, React, Prisma, PostgreSQL, MySQL">Node.js, Express, NestJS, Grails, ASP.NET Core, Spring Boot, Laravel, React, Prisma, PostgreSQL, MySQL</p>
                 <div class="hero-highlights">
@@ -58,11 +61,11 @@
                     </div>
                 </div>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary" data-ar="عرض الأعمال" data-en="View Work">عرض الأعمال</a>
-                    <a href="Israa_Mazaraa_CV.pdf" download class="btn btn-secondary" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية</a>
-                    <a href="#contact" class="btn btn-secondary" data-ar="احصل على عرض" data-en="Get a Quote">احصل على عرض</a>
+                    <a href="#projects" class="btn btn-primary btn-with-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i><span>View Work</span></a>
+                    <a href="Israa_Mazaraa_Resume (1) (1).pdf" id="printCvButton" class="btn btn-secondary btn-with-icon" download="Israa_Mazaraa_Resume.pdf"><i class="fa-solid fa-download" aria-hidden="true"></i><span>Download CV</span></a>
+                    <!-- <a href="#contact" class="btn btn-secondary btn-small" data-ar="تواصل" data-en="Contact">تواصل</a> -->
                 </div>
-                <div class="hero-stack">
+                <!-- <div class="hero-stack">
                     <span>Node.js</span>
                     <span>Express</span>
                     <span>NestJS</span>
@@ -75,7 +78,7 @@
                     <span>PostgreSQL</span>
                     <span>MySQL</span>
                     <span>Python</span>
-                </div>
+                </div> -->
             </div>
 
             <div class="hero-panel reveal">
@@ -89,7 +92,7 @@
                         <p class="code-line">&lt;<span>Developer</span>&gt;</p>
                         <p class="code-line">&nbsp;&nbsp;&lt;<span>Name</span>&gt;Israa Mazaraa&lt;/<span>Name</span>&gt;</p>
                         <p class="code-line">&nbsp;&nbsp;&lt;<span>Role</span>&gt;Full Stack & QA Engineer&lt;/<span>Role</span>&gt;</p>
-                        <p class="code-line">&nbsp;&nbsp;&lt;<span>Stack</span>&gt;Node.js, Spring Boot, Grails, React&lt;/<span>Stack</span>&gt;</p>
+                        <p class="code-line">&nbsp;&nbsp;&lt;<span>Stack</span>&gt;Node.js, Express, NestJS, Grails, ASP.NET Core, Spring Boot, Laravel, React, Prisma, PostgreSQL, MySQL&lt;/<span>Stack</span>&gt;</p>
                         <p class="code-line">&lt;/<span>Developer</span>&gt;</p>
                     </div>
                     <div class="hero-card__footer">
@@ -109,7 +112,7 @@
 
         <div class="container projects-grid">
             <article class="project-card reveal">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&auto=format&fit=crop');"></div>
+                <div class="project-image" style="background-image: url('images/Tascom.jpg');"></div>
                 <div class="project-body">
                     <span class="project-tag" data-ar="تاسكوم" data-en="Tascom">Tascom</span>
                     <h3 data-ar="منصة مهام مجتمعية" data-en="Community Help Platform">منصة مهام مجتمعية</h3>
@@ -120,8 +123,8 @@
                         <li data-ar="تكامل الخدمات الخلفية والواجهة" data-en="Integrated backend services with frontend">تكامل الخدمات الخلفية والواجهة</li>
                     </ul>
                     <div class="project-actions">
-                        <a href="#contact" class="project-link" data-ar="استفسر الآن" data-en="Ask Now">استفسر الآن</a>
-                        <a href="#freelance" class="project-demo" data-ar="عرض ديمو" data-en="Demo">عرض ديمو</a>
+                        <a href="https://tascom.up.railway.app/swagger" class="project-link" data-ar="عرض تجريبي" data-en="Live Demo">عرض تجريبي</a>
+                        <a href="https://github.com/ala1998/gsg-project-group-3.git" target="_blank" class="project-demo" data-ar="مستودع" data-en="Repository">مستودع</a>
                     </div>
                 </div>
             </article>
@@ -138,14 +141,14 @@
                         <li data-ar="اختبار موثوقية النظام" data-en="Ensured system reliability with testing">اختبار موثوقية النظام</li>
                     </ul>
                     <div class="project-actions">
-                        <a href="#contact" class="project-link" data-ar="تواصل" data-en="Contact">تواصل</a>
-                        <a href="https://www.linkedin.com/in/israa-mousa-691950211/details/projects/" target="_blank" class="project-demo" data-ar="رؤية المشروع" data-en="See Project">رؤية المشروع</a>
+                        <a href="#" class="project-link" data-ar="عرض تجريبي" data-en="Live Demo">عرض تجريبي</a>
+                        <button class="project-demo project-demo-disabled" disabled data-ar="مستودع" data-en="Repository">مستودع</button>
                     </div>
                 </div>
             </article>
 
             <article class="project-card reveal">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&auto=format&fit=crop');"></div>
+                <div class="project-image" style="background-image: url('images/yallaShabab.png');"></div>
                 <div class="project-body">
                     <span class="project-tag" data-ar="Yalla Shabab" data-en="Yalla Shabab">Yalla Shabab</span>
                     <h3 data-ar="منصة تدريب وتمكين شبابية" data-en="Youth Training Platform">منصة تدريب وتمكين شبابية</h3>
@@ -156,14 +159,14 @@
                         <li data-ar="تمكين التوظيف والتدريب" data-en="Enabled hiring and youth development">تمكين التوظيف والتدريب</li>
                     </ul>
                     <div class="project-actions">
-                        <a href="#contact" class="project-link" data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</a>
-                        <a href="#freelance" class="project-demo" data-ar="احجز استشارة" data-en="Book a Call">احجز استشارة</a>
+                        <a href="#" class="project-link" data-ar="عرض تجريبي" data-en="Live Demo">عرض تجريبي</a>
+                        <a href="https://github.com/Israa-Mousa" target="_blank" class="project-demo" data-ar="مستودع" data-en="Repository">مستودع</a>
                     </div>
                 </div>
             </article>
 
             <article class="project-card reveal">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&auto=format&fit=crop');"></div>
+                <div class="project-image" style="background-image: url('images/bagisto.jpg');"></div>
                 <div class="project-body">
                     <span class="project-tag" data-ar="Bagisto" data-en="Bagisto">Bagisto</span>
                     <h3 data-ar="متجر إلكتروني مخصص" data-en="Custom E-commerce">متجر إلكتروني مخصص</h3>
@@ -174,8 +177,44 @@
                         <li data-ar="تكامل وظائف التجارة الإلكترونية" data-en="Integrated e-commerce features">تكامل وظائف التجارة الإلكترونية</li>
                     </ul>
                     <div class="project-actions">
-                        <a href="#contact" class="project-link" data-ar="اطلب نطاق" data-en="Request Scope">اطلب نطاق</a>
-                        <a href="https://mostaql.com/u/Israa_Mazaraa" target="_blank" class="project-demo" data-ar="اعرض Mostaql" data-en="View Mostaql">اعرض Mostaql</a>
+                        <a href="https://estore.jawwal.ps/" target="_blank" class="project-link" data-ar="عرض تجريبي" data-en="Live Demo">عرض تجريبي</a>
+                        <a href="https://github.com/Israa-Mousa/BagistoNew.git" target="_blank" class="project-demo" data-ar="مستودع" data-en="Repository">مستودع</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" style="background-image: url('images/Mucip.jpg');"></div>
+                <div class="project-body">
+                    <span class="project-tag">Ramallah Municipality</span>
+                    <h3>Municipality Application (Laravel)</h3>
+                    <p class="project-meta">Dec 2021 - Mar 2022 | Ramallah Municipality</p>
+                    <p>Built a Laravel municipality app for service requests and internal workflow management.</p>
+                    <ul class="project-details">
+                        <li>Laravel backend modules</li>
+                        <li>Workflow and data management</li>
+                    </ul>
+                    <div class="project-actions">
+                        <button class="project-link project-link-disabled" disabled>Live Demo</button>
+                        <button class="project-demo project-demo-disabled" disabled>Repository</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop');"></div>
+                <div class="project-body">
+                    <span class="project-tag">Data Analysis</span>
+                    <h3>Full EDA Report - Health Insurance Claims</h3>
+                    <p class="project-meta">Dec 2021 - Mar 2022 | Center for Continuing Education - Birzeit University</p>
+                    <p>Completed an end-to-end EDA on patient claims data to support fraud detection insights.</p>
+                    <ul class="project-details">
+                        <li>Data cleaning and feature engineering</li>
+                        <li>Anomaly and pattern analysis</li>
+                    </ul>
+                    <div class="project-actions">
+                        <button class="project-link project-link-disabled" disabled>Live Demo</button>
+                        <button class="project-demo project-demo-disabled" disabled>Repository</button>
                     </div>
                 </div>
             </article>
@@ -196,18 +235,25 @@
                 <span class="brand-logo upwork-logo" aria-hidden="true">U</span>
                 <h3>Upwork</h3>
                 <p data-ar="عمل مستقل احترافي في تطوير الويب وضمان الجودة." data-en="Professional freelance work in web development and QA.">عمل مستقل احترافي في تطوير الويب وضمان الجودة.</p>
-                <a href="https://www.upwork.com/freelancers/~0161b48e9f69c35493" target="_blank" class="btn btn-primary">زيارة Upwork</a>
+                <a href="https://www.upwork.com/freelancers/~0161b48e9f69c35493" target="_blank" class="btn btn-primary">Upwork</a>
             </article>
             <article class="platform-card">
                 <i class="fas fa-briefcase"></i>
                 <h3>Mostaql</h3>
                 <p data-ar="خدمات عربية للعمل الحر للمشاريع البرمجية وضمان الجودة." data-en="Arabic freelance services for software and QA projects.">خدمات عربية للعمل الحر للمشاريع البرمجية وضمان الجودة.</p>
-                <a href="https://mostaql.com/u/Israa_Mazaraa" target="_blank" class="btn btn-primary">زيارة Mostaql</a>
+                <a href="https://mostaql.com/u/Israa_Mazaraa" target="_blank" class="btn btn-primary">Mostaql</a>
             </article>
         </div>
     </section>
 
     <section id="services" class="section services">
+        <div class="butterflies" aria-hidden="true">
+            <div class="butterfly b1"></div>
+            <div class="butterfly b2"></div>
+            <div class="butterfly b3"></div>
+            <div class="butterfly b4"></div>
+            <div class="butterfly b5"></div>
+        </div>
         <div class="container section-heading reveal">
             <span class="section-label" data-ar="خدماتي" data-en="Services">خدماتي</span>
             <h2 data-ar="أهم الخدمات اللي بقدمها" data-en="My core services">أهم الخدمات اللي بقدمها</h2>
@@ -278,6 +324,7 @@
             <div class="skill-pill">Express</div>
             <div class="skill-pill">NestJS</div>
             <div class="skill-pill">Grails</div>
+            <div class="skill-pill">ASP.NET Core</div>
             <div class="skill-pill">Spring Boot</div>
             <div class="skill-pill">Laravel</div>
             <div class="skill-pill">React</div>
@@ -304,10 +351,10 @@
                     <span class="certificate-issuer">Gaza Sky Geeks</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">فبراير 2026 - فبراير 2036</span>
+                    <span class="certificate-date">Feb 2026 - Feb 2036</span>
                     <span class="certificate-badge">Backend Training</span>
                 </div>
-                <p class="certificate-description">تدريب عملي على بناء واجهات برمجة تطبيقات Back-End باستخدام Node.js وExpress والتعامل مع قواعد البيانات.</p>
+                <p class="certificate-description">Hands-on training in building backend APIs using Node.js and Express, with practical database integration.</p>
                 <div class="certificate-skills">
                     <span>Node.js</span>
                     <span>REST APIs</span>
@@ -325,7 +372,7 @@
                     <span class="certificate-date">Jan 2024 - Feb 2025</span>
                     <span class="certificate-badge">Legacy Modernization</span>
                 </div>
-                <p class="certificate-description">عملت على تحويل أنظمة الويب القديمة إلى ASP.NET Core مع أنظمة تتبع توصيل، تقارير أوتوماتيكية، وتكامل APIs.</p>
+                <p class="certificate-description">Worked on modernizing legacy web systems into ASP.NET Core with delivery tracking, automated reports, and API integrations.</p>
                 <div class="certificate-skills">
                     <span>ASP.NET Core</span>
                     <span>Entity Framework</span>
@@ -340,10 +387,10 @@
                     <span class="certificate-issuer">Jerusalem High Tech Foundry</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">فبراير 2025</span>
+                    <span class="certificate-date">Feb 2025</span>
                     <span class="certificate-badge">Spring Boot</span>
                 </div>
-                <p class="certificate-description">تعلمت بناء تطبيقات خدمية باستخدام Spring Boot وإدارة المشروع عبر GitHub.</p>
+                <p class="certificate-description">Learned to build service-based applications with Spring Boot and manage project workflows using GitHub.</p>
                 <div class="certificate-skills">
                     <span>Spring Boot</span>
                     <span>GitHub</span>
@@ -356,10 +403,10 @@
                     <span class="certificate-issuer">Jerusalem High Tech Foundry</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">فبراير 2025</span>
+                    <span class="certificate-date">Feb 2025</span>
                     <span class="certificate-badge">UI / React</span>
                 </div>
-                <p class="certificate-description">برنامج شامل لتطوير الواجهات باستخدام HTML وCSS وReact مع تجربة مستخدم احترافية.</p>
+                <p class="certificate-description">A comprehensive frontend program covering HTML, CSS, and React with a strong focus on professional user experience.</p>
                 <div class="certificate-skills">
                     <span>HTML5</span>
                     <span>React.js</span>
@@ -372,10 +419,10 @@
                     <span class="certificate-issuer">Jerusalem High Tech Foundry</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">يناير 2025</span>
+                    <span class="certificate-date">Jan 2025</span>
                     <span class="certificate-badge">Career Skills</span>
                 </div>
-                <p class="certificate-description">تطوير مهارات الاتصال والعمل المهني والتخطيط الذكي للنمو الوظيفي في مجال التكنولوجيا.</p>
+                <p class="certificate-description">Developed communication, professional collaboration, and strategic planning skills for long-term tech career growth.</p>
                 <div class="certificate-skills">
                     <span>Communication</span>
                     <span>Teamwork</span>
@@ -388,10 +435,10 @@
                     <span class="certificate-issuer">Foothill Technology Solutions, LLC.</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">فبراير 2023</span>
+                    <span class="certificate-date">Feb 2023</span>
                     <span class="certificate-badge">Quality Assurance</span>
                 </div>
-                <p class="certificate-description">تركيز على منهجيات الاختبار، ضمان الجودة، واكتشاف الأخطاء قبل إطلاق المشاريع.</p>
+                <p class="certificate-description">Focused on testing methodologies, quality assurance processes, and early bug detection before production release.</p>
                 <div class="certificate-skills">
                     <span>QA</span>
                     <span>Test Planning</span>
@@ -404,10 +451,10 @@
                     <span class="certificate-issuer">Center for Continuing Education - Birzeit University</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">أبريل 2022</span>
+                    <span class="certificate-date">Apr 2022</span>
                     <span class="certificate-badge">Data Analytics</span>
                 </div>
-                <p class="certificate-description">أساسيات تحليل البيانات، تصور النتائج، واستخدام الأدوات لدعم اتخاذ القرار الذكي.</p>
+                <p class="certificate-description">Covered data analysis fundamentals, result visualization, and practical tools for data-driven decision making.</p>
                 <div class="certificate-skills">
                     <span>Data Science</span>
                     <span>Analytics</span>
@@ -420,10 +467,10 @@
                     <span class="certificate-issuer">Experts Turnkey Solutions</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">نوفمبر 2021</span>
+                    <span class="certificate-date">Nov 2021</span>
                     <span class="certificate-badge">Mobile Apps</span>
                 </div>
-                <p class="certificate-description">بناء تطبيقات Hybrid ذات واجهة عصرية باستخدام Ionic مع تجربة مستخدم متنقلة متميزة.</p>
+                <p class="certificate-description">Built hybrid mobile applications with Ionic and modern UI patterns for an improved mobile user experience.</p>
                 <div class="certificate-skills">
                     <span>Ionic</span>
                     <span>Mobile UI</span>
@@ -436,10 +483,10 @@
                     <span class="certificate-issuer">Microsoft</span>
                 </div>
                 <div class="certificate-meta">
-                    <span class="certificate-date">ديسمبر 2021 - فبراير 2022</span>
+                    <span class="certificate-date">Dec 2021 - Feb 2022</span>
                     <span class="certificate-badge">Marketing Automation</span>
                 </div>
-                <p class="certificate-description">تعلمت تصميم رحلات العملاء وأتمتة التسويق وربط البيانات لتجربة عملاء أفضل.</p>
+                <p class="certificate-description">Learned to design customer journeys, automate marketing flows, and connect data for stronger customer experiences.</p>
                 <div class="certificate-skills">
                     <span>Marketing Automation</span>
                     <span>Lead Management</span>
@@ -453,7 +500,7 @@
             <article class="contact-panel">
                 <span class="section-label" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</span>
                 <h2 data-ar="دعنا نبدأ مشروعك القادم" data-en="Let’s start your next project">دعنا نبدأ مشروعك القادم</h2>
-                <p data-ar="متاح لمشاريع تطوير الويب، أنظمة المؤسسات، الأتمتة، وتطبيقات البيانات." data-en="Available for web development, enterprise systems, automation, and data applications.">متاح لمشاريع تطوير الويب، أنظمة المؤسسات، الأتمتة، وتطبيقات البيانات.</p>
+                <p data-ar="متاح لمشاريع تطوير الويب، أنظمة المؤسسات، وضمان الجودة مع نهج احترافي ومرن." data-en="Available for web development, enterprise systems, and QA with a professional, flexible approach.">متاح لمشاريع تطوير الويب، أنظمة المؤسسات، وضمان الجودة مع نهج احترافي ومرن.</p>
                 <div class="contact-details">
                     <div>
                         <strong data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</strong>
@@ -464,11 +511,11 @@
                         <a href="tel:+972592385684">+972 59 2385 684</a>
                     </div>
                 </div>
-                <div class="social-links">
+                <!-- <div class="social-links">
                     <a href="https://www.linkedin.com/in/israa-mousa-691950211/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/Israa-Mousa" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://www.upwork.com/freelancers/~0161b48e9f69c35493" target="_blank" title="Upwork" class="upwork-link"><span class="brand-logo upwork-logo">U</span></a>
-                </div>
+                </div> -->
             </article>
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
@@ -492,7 +539,8 @@
         <div class="container footer-advanced-grid">
             <div class="footer-panel">
                 <span class="footer-title">Israa Mazaraa</span>
-                <p>متاحة لمشاريع تطوير الويب، أنظمة المؤسسات، وضمان الجودة مع نهج احترافي ومرن.</p>
+<p>Available for web development projects, enterprise systems, and quality assurance, with a professional and flexible approach.
+</p>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/israa-mousa-691950211/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/Israa-Mousa" target="_blank"><i class="fab fa-github"></i></a>
@@ -514,7 +562,7 @@
                     <li data-ar="تطوير كامل" data-en="Full Stack">تطوير كامل</li>
                     <li data-ar="حلول مؤسسات" data-en="Enterprise Systems">حلول مؤسسات</li>
                     <li data-ar="ضمان الجودة" data-en="Quality Assurance">ضمان الجودة</li>
-                    <li data-ar="استشارات تقنية" data-en="Technical Consulting">استشارات تقنية</li>
+                    <!-- <li data-ar="استشارات تقنية" data-en="Technical Consulting">استشارات تقنية</li> -->
                 </ul>
             </div>
         </div>

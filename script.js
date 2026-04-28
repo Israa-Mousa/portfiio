@@ -1,10 +1,11 @@
-﻿// ============================================
+// ============================================
 // PROFESSIONAL BILINGUAL PORTFOLIO
 // ============================================
 
-const EMAILJS_SERVICE_ID = 'service_xxxx';
-const EMAILJS_TEMPLATE_ID = 'template_xxxx';
-const EMAILJS_PUBLIC_KEY = 'your_public_key';
+// Fill these from your EmailJS dashboard to enable direct sending.
+const EMAILJS_SERVICE_ID = 'service_juqtrh8';
+const EMAILJS_TEMPLATE_ID = '1ughxkx';
+const EMAILJS_PUBLIC_KEY = 'lCxJipnIPO_CMkd5E';
 
 const translations = {
     ar: {
@@ -13,7 +14,9 @@ const translations = {
         sending: 'جارٍ الإرسال...',
         success: 'تم إرسال رسالتك بنجاح! شكراً لتواصلك.',
         sendMessage: 'إرسال الرسالة',
-        sendError: 'حدث خطأ أثناء الإرسال. حاول مرة أخرى.'
+        sendError: 'حدث خطأ أثناء الإرسال. حاول مرة أخرى.',
+        emailNotConfigured: 'خدمة الإرسال غير مفعلة بعد. أضيفي مفاتيح EmailJS في script.js.',
+        runOnServer: 'شغّلي الموقع عبر Live Server (http://localhost) وليس file://'
     },
     en: {
         fillFields: 'Please fill in all fields.',
@@ -21,19 +24,25 @@ const translations = {
         sending: 'Sending...',
         success: 'Your message has been sent successfully! Thank you.',
         sendMessage: 'Send Message',
-        sendError: 'An error occurred while sending. Please try again.'
+        sendError: 'An error occurred while sending. Please try again.',
+        emailNotConfigured: 'Email sending is not configured yet. Add EmailJS keys in script.js.',
+        runOnServer: 'Run this site via Live Server (http://localhost), not file://'
     }
 };
 
-let currentLang = 'ar';
+let currentLang = 'en';
 
 document.addEventListener('DOMContentLoaded', () => {
-    initializeLanguageToggle();
+    // initializeLanguageToggle(); // language buttons are hidden in markup
     initializeThemeToggle();
+    initializePrintCv();
     initializeNavigation();
     initializeContactForm();
     initializeScrollReveal();
     updateLanguage(currentLang);
+    document.body.classList.add('en');
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
     animateInitialReveal();
 });
 
@@ -49,6 +58,42 @@ function initializeThemeToggle() {
         themeSwitch.addEventListener('click', () => {
             const nextTheme = document.body.classList.contains('light') ? 'dark' : 'light';
             applyTheme(nextTheme);
+        });
+    }
+}
+
+function initializePrintCv() {
+    const printCvButton = document.getElementById('printCvButton');
+    if (printCvButton) {
+        printCvButton.setAttribute('download', 'Israa_Mazaraa_Resume.pdf');
+        printCvButton.addEventListener('click', async (event) => {
+            event.preventDefault();
+
+            const filePath = 'Israa_Mazaraa_Resume (1) (1).pdf';
+            const downloadName = 'Israa_Mazaraa_Resume.pdf';
+
+            try {
+                const response = await fetch(filePath, { cache: 'no-store' });
+                if (!response.ok) throw new Error('Failed to fetch resume');
+
+                const fileBlob = await response.blob();
+                const objectUrl = window.URL.createObjectURL(fileBlob);
+                const tempLink = document.createElement('a');
+                tempLink.href = objectUrl;
+                tempLink.download = downloadName;
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                tempLink.remove();
+                window.URL.revokeObjectURL(objectUrl);
+            } catch (error) {
+                // Final fallback still forces download without navigation.
+                const tempLink = document.createElement('a');
+                tempLink.href = filePath;
+                tempLink.download = downloadName;
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                tempLink.remove();
+            }
         });
     }
 }
@@ -82,7 +127,7 @@ function switchLanguage(lang) {
     currentLang = lang;
     updateLanguage(lang);
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(`langBtn-${lang}`).classList.add('active');
+    document.getElementById(`langBtn-${lang}`)?.classList.add('active');
     document.body.classList.toggle('en', lang === 'en');
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -153,6 +198,10 @@ function initializeContactForm() {
 
 function handleFormSubmit(event) {
     event.preventDefault();
+    if (window.location.protocol === 'file:') {
+        return showAlert(translations[currentLang].runOnServer, 'error');
+    }
+
     const form = event.currentTarget;
     const name = form.querySelector('#name').value.trim();
     const email = form.querySelector('#email').value.trim();
@@ -172,13 +221,23 @@ function handleFormSubmit(event) {
     submitButton.textContent = translations[currentLang].sending;
 
     const templateParams = {
+        // Keys used by your current EmailJS template
+        name: name,
+        email: email,
+        time: new Date().toLocaleString('en-US'),
+        title: `Contact Us: ${name}`,
+        // Also keep common aliases for future templates
         from_name: name,
         from_email: email,
         message: message,
         subject: `Contact request from ${name}`
     };
 
-    if (window.emailjs && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID) {
+    const isEmailJsConfigured = Boolean(
+        EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY
+    );
+
+    if (window.emailjs && isEmailJsConfigured) {
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
             .then(() => {
                 showAlert(translations[currentLang].success, 'success');
@@ -186,21 +245,21 @@ function handleFormSubmit(event) {
                 submitButton.disabled = false;
                 submitButton.textContent = translations[currentLang].sendMessage;
             })
-            .catch(() => {
-                showAlert(translations[currentLang].sendError, 'error');
+            .catch((error) => {
+                console.error('EmailJS send failed:', error);
+                const details = error?.text || error?.message || '';
+                showAlert(
+                    details ? `${translations[currentLang].sendError} (${details})` : translations[currentLang].sendError,
+                    'error'
+                );
                 submitButton.disabled = false;
                 submitButton.textContent = translations[currentLang].sendMessage;
             });
     } else {
-        openEmailClient(templateParams);
+        showAlert(translations[currentLang].emailNotConfigured, 'error');
         submitButton.disabled = false;
         submitButton.textContent = translations[currentLang].sendMessage;
     }
-}
-
-function openEmailClient({ from_name, from_email, subject, message }) {
-    const mailto = `mailto:israamousa96@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${from_name}\nEmail: ${from_email}\n\n${message}`)}`;
-    window.location.href = mailto;
 }
 
 // ============================================
