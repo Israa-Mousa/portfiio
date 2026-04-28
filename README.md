@@ -1,4 +1,4 @@
-# 🎨 Portfolio Website - إسراء موسى
+# 🎨 Portfolio Website - إسراء مزارعة
 
 موقع بورتفيليو احترافي وحديث مبني بـ HTML و CSS و JavaScript بالكامل.
 
