@@ -51,8 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 function initializeThemeToggle() {
     const themeSwitch = document.getElementById('themeSwitch');
-    const savedTheme = localStorage.getItem('portfolioTheme') || 'dark';
-    applyTheme(savedTheme);
+    const defaultTheme = 'dark';
+    applyTheme(defaultTheme);
+    localStorage.setItem('portfolioTheme', defaultTheme);
 
     if (themeSwitch) {
         themeSwitch.addEventListener('click', () => {
