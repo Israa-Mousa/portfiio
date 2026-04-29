@@ -245,6 +245,13 @@ a {
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .hamburger span,
@@ -947,7 +954,7 @@ a {
 }
 
 .platform-card .brand-logo.upwork-logo {
-    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    background: var(--accent);
     color: #ffffff;
     width: 60px;
     height: 60px;

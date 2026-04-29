@@ -155,9 +155,15 @@ function initializeNavigation() {
     const navMenu = document.getElementById('navMenu');
 
     if (hamburger) {
-        hamburger.addEventListener('click', () => {
+        const toggleMenu = () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            toggleMenu();
         });
     }
 
