@@ -70,7 +70,7 @@ function initializePrintCv() {
         printCvButton.addEventListener('click', async (event) => {
             event.preventDefault();
 
-            const filePath = 'Israa_Mazaraa_Resume (1) (1).pdf';
+            const filePath = 'Israa_Mazaraa_Resume.pdf';
             const downloadName = 'Israa_Mazaraa_Resume.pdf';
 
             try {
